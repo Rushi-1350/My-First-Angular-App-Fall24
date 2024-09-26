@@ -1,2 +1,12 @@
-<h1>{{ favSubject }}</h1>
-<h1>{{ age }}</h1>
+<div *ngFor="let person of aboutDetails">
+    <h2>{{person.name}}({{person.location}})</h2>
+    <p><strong>Bio: </strong>{{person.bio}}</p>
+    <p><strong>Email: </strong>{{person.email}}</p>
+    <div *ngIf="person.interests">
+        <p><strong>Interests: </strong></p>
+        <ul>
+            <li *ngFor= "let interest of person.interests">{{ interest }}</li>
+        </ul>
+    </div>
+    <hr />
+</div>
