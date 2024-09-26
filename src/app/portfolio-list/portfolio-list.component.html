@@ -1,6 +1,4 @@
+<!-- Looping through the array of projects and passing each project to PortfolioListItemComponent -->
 <div *ngFor="let project of projects">
-    <app-portfolio-list-item [project]="project"></app-portfolio-list-item>
-  </div>
-<div *ngFor="let project of projects">
-    <app-portfolio-list-item [project]="project"></app-portfolio-list-item>
+    <app-portfolio-list-item [projects]="project"></app-portfolio-list-item>
   </div>
