@@ -1,16 +1,1 @@
-<!-- Loop through each person in the aboutDetails array -->
-<div *ngFor="let person of aboutDetails">
-    <h2>{{person.name}}({{person.location}})</h2>
-    <p><strong>Bio: </strong>{{person.bio}}</p>
-    <p><strong>Email: </strong>{{person.email}}</p>
-    <!-- Conditionally display interests if they exist for the person -->
-    <div *ngIf="person.interests">
-        <p><strong>Interests: </strong></p>
-        <!-- Loop through the interests array and display each interest as a list item -->
-        <ul>
-            <li *ngFor= "let interest of person.interests">{{ interest }}</li>
-        </ul>
-    </div>
-    <!-- Add a horizontal line to seperate each person's details -->
-    <hr />
-</div>
+<app-portfolio-list></app-portfolio-list>

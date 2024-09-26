@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, Input } from '@angular/core';
+import { IContent } from '../models/content.model';
 
 @Component({
   selector: 'app-portfolio-list-item',
@@ -9,5 +9,6 @@ import { Component } from '@angular/core';
   styleUrl: './portfolio-list-item.component.css'
 })
 export class PortfolioListItemComponent {
-
+  // Using @Input() to bind project data
+  @Input() projects!: IContent;
 }
