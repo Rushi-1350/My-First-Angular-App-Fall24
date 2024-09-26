@@ -1,1 +1,7 @@
-<p>portfolio-list-item works!</p>
+<div class="project-item">
+    <h3>{{ projects.title }}</h3>
+    <p>{{ projects.description }}</p>
+    <p><strong>Technologies: </strong>{{ projects.technologies.join(', ') }}</p>
+    <a [href]="projects.link">View Project</a>
+    <p>Status: {{ projects.completed ? 'Completed' : 'In Progress' }}</p>
+  </div>
