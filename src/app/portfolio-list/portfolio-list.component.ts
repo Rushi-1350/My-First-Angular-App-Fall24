@@ -17,4 +17,12 @@ export class PortfolioListComponent implements OnInit {
   constructor(private portfolioService: PortfolioService) { 
     //this constructor is primarily used for dependency injection
   }
+  ngOnInit(): void {
+    // This lifecycle hook to fetch and init our data
+      this.portfolioService.getProjects().subscribe({
+        next: (data: IContent[]) => this.projects = data,
+      error:err => console.error("Error fetching Students", err),
+     complete:() => console.log("Student data fetch complete!")
+      })
+  }
 }
